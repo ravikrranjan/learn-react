@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic Fucntional App</title>
+
+    </head>
+    <body>
+        <div id="root"></div>
+        <!-- unpkg.com/:package@:version/:file -->
+        <!-- <script src="https://unpkg.com/react/umd/react.development.js"></script> -->
+
+        <script src="https://unpkg.com/react@16.7.0/umd/react.production.min.js"></script>
+
+        <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js"></script>
+        <!-- <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script> -->
+        <script src="https://unpkg.com/babel-standalone/babel.min.js"></script>
+
+        <!-- <script type="module" src="../index.js"></script> -->
+        <script type="text/babel">
+            //~$ ReactDOM render method 
+            //~@ ReactDOM.render(Element, Container)
+            const HelloWorld =()=> {
+                return <h1>Hello, World!</h1>;
+            }
+
+        ReactDOM.render(<HelloWorld />, document.getElementById('root'))
+        </script>
+    </body>
+</html>
