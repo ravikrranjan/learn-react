@@ -1,5 +1,8 @@
 import React from "react";
-
+import Composition from "./Component-Composition"
+import Controlled from "./Controlled";
+import FullyControlledComponent from "./FullyControlledComponent";
+import Uncontrolled from "./Uncontrolled";
 class ClassComponent extends React.Component {
   render() {
     return <p>Class Component: {new Date().toISOString()}</p>;
@@ -44,6 +47,18 @@ export default class App extends React.Component {
         <PureClassComponent />
         <FunctionComponent />
         <MemoizedFunctionComponent />
+        <h1>Uncontrolled</h1>
+        <Uncontrolled />
+
+        <h1>Controlled</h1>
+        
+        <Controlled />
+
+        <h1>FullyControlledComponent</h1>
+        <FullyControlledComponent />
+
+        <h1>Composition</h1>
+        <Composition />
       </div>
     );
   }
