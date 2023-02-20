@@ -1,8 +1,18 @@
 import React from "react";
+import util from "./ Higher Order Component";
 import Composition from "./Component-Composition"
+import EditableText from "./Conditional Rendering";
 import Controlled from "./Controlled";
+import NullErr from "./Err-Nulljs";
+import FragmentsApp from "./Fragments";
 import FullyControlledComponent from "./FullyControlledComponent";
+import HOCApp from "./higher-order-component";
+import CryptoListApp from "./Lists-Rendering";
+import StyledComponentsApp from "./Styled components";
 import Uncontrolled from "./Uncontrolled";
+import UserApp from "./UserAccess";
+
+const CryptoPriceTable = util.withCryptoPrices(util.PriceTable);
 class ClassComponent extends React.Component {
   render() {
     return <p>Class Component: {new Date().toISOString()}</p>;
@@ -42,6 +52,18 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
+        <CryptoPriceTable />
+        <h1>HOCApp</h1>
+        <HOCApp />
+        <h1>StyledComponentsApp</h1>
+
+        <StyledComponentsApp />
+        <h1>UserApp</h1>
+        <UserApp />
+        <h1>NullErr</h1>
+        <NullErr />
+        <h1>EditableText</h1>
+        <EditableText />
         <p>App: {this.state.lastRender}</p>
         <ClassComponent />
         <PureClassComponent />
@@ -59,6 +81,13 @@ export default class App extends React.Component {
 
         <h1>Composition</h1>
         <Composition />
+
+        <h1>CryptoListApp</h1>
+        <CryptoListApp />
+        <h1>FragmentsApp</h1>
+        <FragmentsApp />
+
+        
       </div>
     );
   }
