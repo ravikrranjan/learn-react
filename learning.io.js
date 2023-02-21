@@ -58,3 +58,32 @@
           value: e.target.value,
         }));
      };
+
+
+
+
+    //  -----------------------------
+// ~!Routing
+
+// React Router
+// ~% Developed by Michael Jackson and Ryan Florence 
+
+// ~^React Router interface#
+// ~^five core components:
+
+    BrowserRouter
+    Link
+    Route
+    Redirect
+    Switch
+
+// ~^imperative History API, that can be extended via the history package
+
+// ~#React Router installation and usage
+// yarn add react-router-dom
+
+// ~* 1.React Router’s usage is declarative 
+// ~* 2. Routers can be used anywhere in the application
+// ~*3. Router Context: the page nested in tree 
+// ~*4. context will wrap the entire application and 
+// ~!exist only once
